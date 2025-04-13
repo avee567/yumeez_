@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yummy's Pastries</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('background.jpeg') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .welcome-container {
+      text-align: center;
+      /* background-color: rgba(0, 0, 0, 0.5); */
+      /* padding: 40px; */
+      /* border-radius: 20px; */
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .word {
+      font-size: 6rem;
+      font-weight: bold;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideUp 1s forwards;
+    }
+
+    .word:nth-child(1) { animation-delay: 0.5s; }
+    .word:nth-child(2) { animation-delay: 1.2s; }
+    .word:nth-child(3) { animation-delay: 1.9s; }
+    .word:nth-child(4) { animation-delay: 2.6s; }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .enter-site {
+      margin-top: 50px;
+      padding: 12px 28px;
+      background-color: #ffb347;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    .enter-site:hover {
+      background-color: #e59400;
+    }
+
+  </style>
+</head>
+<body>
+<div class="overlay">
+  
+  <div class="welcome-container">
+    <div class="word">Welcome</div>
+    <div class="word">to</div>
+    <div class="word">Yumeez</div>
+    <div class="word">Pastries</div>
+    <a href="menu.html" class="enter-site">Proceed</a>
+  </div>
+</div>
+
+</body>
+</html>
