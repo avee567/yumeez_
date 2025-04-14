@@ -10,21 +10,41 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
+    :root {
+      --bg-color: #fffaf5;
+      --text-color: #4b2e0f;
+      --primary: #d04a00;
+      --secondary: #e5b577;
+      --nav-bg: #f7cf99;
+      --menu-item-bg: #fff;
+    }
+
+    body.dark {
+      --bg-color: #1e1e1e;
+      --text-color: #f5deb3;
+      --primary: #ff9248;
+      --secondary: #8b5c00;
+      --nav-bg: #333;
+      --menu-item-bg: #2b2b2b;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #fffaf5;
-      color: #4b2e0f;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
     }
 
     nav {
       position: fixed;
       top: 0;
       width: 100%;
-      background: #f7cf99;
+      background: var(--nav-bg);
       display: flex;
-      justify-content: center;
-      padding: 1rem 0;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       z-index: 1000;
     }
@@ -32,16 +52,25 @@
     nav ul {
       list-style: none;
       display: flex;
-      gap: 30px;
+      gap: 20px;
       margin: 0;
       padding: 0;
+      flex-wrap: wrap;
     }
 
     nav a {
       text-decoration: none;
       font-weight: bold;
-      color: #5e3a00;
-      font-size: 1.1rem;
+      color: var(--text-color);
+      font-size: 1rem;
+    }
+
+    .toggle-btn {
+      font-size: 1.2rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text-color);
     }
 
     .container {
@@ -53,7 +82,7 @@
     h2 {
       text-align: center;
       font-size: 2.5rem;
-      color: #d04a00;
+      color: var(--primary);
       margin-bottom: 40px;
     }
 
@@ -68,7 +97,7 @@
     .tabs button {
       padding: 10px 20px;
       border: none;
-      background: #e5b577;
+      background: var(--secondary);
       color: #fff;
       border-radius: 30px;
       font-weight: bold;
@@ -77,7 +106,7 @@
     }
 
     .tabs button.active {
-      background-color: #d04a00;
+      background-color: var(--primary);
     }
 
     .tab-content {
@@ -95,11 +124,19 @@
     }
 
     .menu-item {
+      background: var(--menu-item-bg);
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
       margin-bottom: 30px;
       align-items: center;
+      border-radius: 12px;
+      padding: 10px;
+      transition: transform 0.3s;
+    }
+
+    .menu-item:hover {
+      transform: scale(1.01);
     }
 
     .menu-item img {
@@ -117,17 +154,17 @@
     .menu-details h4 {
       margin: 0;
       font-size: 1.4rem;
-      color: #b33d00;
+      color: var(--primary);
     }
 
     .menu-details p {
       margin: 5px 0;
-      color: #5c4323;
+      color: var(--text-color);
     }
 
     .menu-details span {
       font-weight: bold;
-      color: #d04a00;
+      color: var(--primary);
       display: block;
       margin-top: 5px;
     }
@@ -138,9 +175,24 @@
         align-items: flex-start;
       }
 
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
       .menu-item img {
         width: 100%;
         height: auto;
+      }
+
+      .tabs {
+        flex-direction: column;
+        align-items: center;
       }
     }
   </style>
@@ -157,20 +209,24 @@
       <li><a href="history.html">History</a></li>
       <li><a href="gallery.html">Gallery</a></li>
     </ul>
+    <button class="toggle-btn" onclick="toggleDarkMode()" title="Toggle Dark Mode">
+      <i class="fas fa-moon"></i>
+    </button>
   </nav>
 
   <div class="container">
-    <h2>Our Menu</h2>
+    <h2 data-aos="fade-down">Our Menu</h2>
 
     <!-- Tabs -->
-    <div class="tabs">
+    <div class="tabs" data-aos="fade-up">
       <button class="tab-btn active" data-tab="cakes">Cakes</button>
       <button class="tab-btn" data-tab="pastries">Pastries</button>
       <button class="tab-btn" data-tab="main">Main Dish</button>
       <button class="tab-btn" data-tab="drinks">Drinks</button>
     </div>
 
-    <!-- Cakes -->
+    <!-- Tab Contents -->
+     <!-- Cakes -->
     <div id="cakes" class="tab-content active" data-aos="fade-up">
       <!-- Cake items (unchanged) -->
       <!-- ... All cake items here ... --><!-- Tab Contents -->
@@ -293,12 +349,11 @@
       </div>
     </div>
 
-  </div>
-
-  <!-- Scripts -->
+  <!-- AOS & Tab Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
   <script>
+    AOS.init();
+
     const tabs = document.querySelectorAll('.tab-btn');
     const contents = document.querySelectorAll('.tab-content');
 
@@ -311,6 +366,10 @@
         document.getElementById(btn.dataset.tab).classList.add('active');
       });
     });
+
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
   </script>
 </body>
 </html>
