@@ -11,51 +11,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
-    @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-  }
-
-  .tabs {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .menu-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .menu-item img {
-    width: 90%;
-    height: auto;
-  }
-
-  .container {
-    padding: 0 10px;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  nav a {
-    font-size: 1rem;
-  }
-
-  .toggle-btn {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    background: none;
-    border: none;
-    font-size: 1.2rem;
-    cursor: pointer;
-  }
-}
     :root {
       --bg-color: #fffaf5;
       --text-color: #4b2e0f;
@@ -63,6 +18,7 @@
       --secondary: #e5b577;
       --nav-bg: #f7cf99;
       --menu-item-bg: #fff;
+      --accent: #d04a00;
     }
 
     body.dark {
@@ -72,23 +28,24 @@
       --secondary: #8b5c00;
       --nav-bg: #333;
       --menu-item-bg: #2b2b2b;
+      --accent: #ff7300;
     }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #fff8f2;
-      color: #3b2a0d;
+      background-color: var(--bg-color);
+      color: var(--text-color);
     }
 
     nav {
       position: fixed;
       top: 0;
       width: 100%;
-      background: #f5d6a6;
+      background: var(--nav-bg);
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
+      justify-content: center;
+      padding: 1rem;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       z-index: 1000;
     }
@@ -96,49 +53,80 @@
     nav ul {
       list-style: none;
       display: flex;
-      gap: 30px;
-      margin: 0;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
       padding: 0;
+      margin: 0;
     }
 
     nav a {
       text-decoration: none;
       font-weight: bold;
-      color: #5e3a00;
-      font-size: 1.1rem;
+      color: var(--text-color);
+      font-size: 1rem;
     }
 
     .container {
       max-width: 600px;
       margin: 120px auto 40px;
       padding: 30px;
-      background: #fff3e0;
-      border-radius: 10px;
+      background: var(--menu-item-bg);
+      border-radius: 12px;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
       text-align: center;
     }
 
     h2 {
-      color: #d04a00;
+      color: var(--primary);
       margin-bottom: 20px;
+      font-size: 1.8rem;
     }
 
-    .social-icons {
+    p {
+      margin-bottom: 25px;
+      font-size: 1rem;
+    }
+
+    .social-icons,
+    .contact-methods {
       display: flex;
-      justify-content: center;
-      gap: 30px;
-      font-size: 2.5rem;
-      margin-top: 30px;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      margin-top: 20px;
     }
 
-    .social-icons a {
-      color: #c44a00;
-      transition: transform 0.3s ease, color 0.3s ease;
+    .social-icons a,
+    .contact-methods a {
+      color: var(--accent);
+      font-size: 1.5rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: color 0.3s ease, transform 0.3s ease;
     }
 
-    .social-icons a:hover {
-      transform: scale(1.2);
+    .social-icons a:hover,
+    .contact-methods a:hover {
       color: #ff7300;
+      transform: scale(1.05);
+    }
+
+    .contact-methods i {
+      font-size: 1.3rem;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        margin: 100px 15px 30px;
+        padding: 20px;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
     }
   </style>
 </head>
@@ -159,15 +147,24 @@
     <h2>Contact Us</h2>
     <p>We'd love to hear from you! Reach out through any of the platforms below:</p>
 
+    <div class="contact-methods">
+      <a href="tel:+2348138070911" title="Call us">
+        <i class="fas fa-phone"></i> +234 813 807 0911
+      </a>
+      <a href="mailto:yumeez@example.com" title="Email us">
+        <i class="fas fa-envelope"></i> yumeez@example.com
+      </a>
+    </div>
+
     <div class="social-icons">
       <a href="https://facebook.com/profile.php?id=100064277102756" target="_blank" title="Facebook">
-        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-facebook-square"></i> Facebook
       </a>
       <a href="https://wa.me/+2348138070911" target="_blank" title="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+        <i class="fab fa-whatsapp"></i> WhatsApp
       </a>
       <a href="https://instagram.com/yumeez__pastries" target="_blank" title="Instagram">
-        <i class="fab fa-instagram"></i>
+        <i class="fab fa-instagram"></i> Instagram
       </a>
     </div>
   </div>
