@@ -18,7 +18,6 @@
       --secondary: #e5b577;
       --nav-bg: #f7cf99;
       --menu-item-bg: #fff;
-      --accent: #d04a00;
     }
 
     body.dark {
@@ -28,24 +27,23 @@
       --secondary: #8b5c00;
       --nav-bg: #333;
       --menu-item-bg: #2b2b2b;
-      --accent: #ff7300;
     }
-
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
+      background-color: #fff8f2;
+      color: #3b2a0d;
     }
 
     nav {
       position: fixed;
       top: 0;
       width: 100%;
-      background: var(--nav-bg);
-      display: column;
-      justify-content: right;
-      padding: 1rem;
+      background: #f5d6a6;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       z-index: 1000;
     }
@@ -53,80 +51,49 @@
     nav ul {
       list-style: none;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 0;
+      gap: 30px;
       margin: 0;
+      padding: 0;
     }
 
     nav a {
       text-decoration: none;
       font-weight: bold;
-      color: var(--text-color);
-      font-size: 1rem;
+      color: #5e3a00;
+      font-size: 1.1rem;
     }
 
     .container {
       max-width: 600px;
       margin: 120px auto 40px;
       padding: 30px;
-      background: var(--menu-item-bg);
-      border-radius: 12px;
+      background: #fff3e0;
+      border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
       text-align: center;
     }
 
     h2 {
-      color: var(--primary);
+      color: #d04a00;
       margin-bottom: 20px;
-      font-size: 1.8rem;
     }
 
-    p {
-      margin-bottom: 25px;
-      font-size: 1rem;
-    }
-
-    .social-icons,
-    .contact-methods {
+    .social-icons {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-      margin-top: 20px;
+      justify-content: center;
+      gap: 30px;
+      font-size: 2.5rem;
+      margin-top: 30px;
     }
 
-    .social-icons a,
-    .contact-methods a {
-      color: var(--accent);
-      font-size: 1.5rem;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      transition: color 0.3s ease, transform 0.3s ease;
+    .social-icons a {
+      color: #c44a00;
+      transition: transform 0.3s ease, color 0.3s ease;
     }
 
-    .social-icons a:hover,
-    .contact-methods a:hover {
+    .social-icons a:hover {
+      transform: scale(1.2);
       color: #ff7300;
-      transform: scale(1.05);
-    }
-
-    .contact-methods i {
-      font-size: 1.3rem;
-    }
-
-    @media (max-width: 480px) {
-      .container {
-        margin: 100px 15px 30px;
-        padding: 20px;
-      }
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
-      }
     }
   </style>
 </head>
@@ -148,25 +115,26 @@
     <p>We'd love to hear from you! Reach out through any of the platforms below:</p>
 
     <div class="contact-methods">
-      <a href="tel:+2348138070911" title="Call us">
-        <i class="fas fa-phone"></i> +234 813 807 0911
-      </a>
-      <a href="mailto:yumeez@example.com" title="Email us">
-        <i class="fas fa-envelope"></i> yumeez@example.com
-      </a>
-    </div>
-
+     
     <div class="social-icons">
       <a href="https://facebook.com/profile.php?id=100064277102756" target="_blank" title="Facebook">
-        <i class="fab fa-facebook-square"></i> Facebook
+        <i class="fab fa-facebook-square"></i> 
       </a>
       <a href="https://wa.me/+2348138070911" target="_blank" title="WhatsApp">
-        <i class="fab fa-whatsapp"></i> WhatsApp
+        <i class="fab fa-whatsapp"></i>
       </a>
       <a href="https://instagram.com/yumeez__pastries" target="_blank" title="Instagram">
-        <i class="fab fa-instagram"></i> Instagram
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="tel:+2348138070911" target="_blank" title="Call us" style="font-size: 2.3rem;">
+        <i class="fas fa-phone" ></i>
+      </a>
+      <a href="mailto:yumeezpastries1@gmail.com" target="_blank" title="Email us" style="font-size: 2.3rem;">
+        <i class="fas fa-envelope"></i>
       </a>
     </div>
+    </div>
+
   </div>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
