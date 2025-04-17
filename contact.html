@@ -11,6 +11,23 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
+    :root {
+      --bg-color: #fffaf5;
+      --text-color: #4b2e0f;
+      --primary: #d04a00;
+      --secondary: #e5b577;
+      --nav-bg: #f7cf99;
+      --menu-item-bg: #fff;
+    }
+
+    body.dark {
+      --bg-color: #1e1e1e;
+      --text-color: #f5deb3;
+      --primary: #ff9248;
+      --secondary: #8b5c00;
+      --nav-bg: #333;
+      --menu-item-bg: #2b2b2b;
+    }
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -24,8 +41,9 @@
       width: 100%;
       background: #f5d6a6;
       display: flex;
-      justify-content: center;
-      padding: 1rem 0;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       z-index: 1000;
     }

@@ -40,7 +40,7 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: var(--nav-bg);
+      background: #f5d6a6;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -48,6 +48,7 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       z-index: 1000;
     }
+
 
     nav ul {
       list-style: none;
@@ -168,7 +169,11 @@
       display: block;
       margin-top: 5px;
     }
-
+    .call{
+      font-weight: bold;
+      color:var(--text-color);
+      font-size: larger;
+    }
     @media (max-width: 768px) {
       .menu-item {
         flex-direction: column;
@@ -191,7 +196,7 @@
       }
 
       .tabs {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
       }
     }
@@ -209,9 +214,9 @@
       <li><a href="history.html">History</a></li>
       <li><a href="gallery.html">Gallery</a></li>
     </ul>
-    <button class="toggle-btn" onclick="toggleDarkMode()" title="Toggle Dark Mode">
+    <!-- <button class="toggle-btn" onclick="toggleDarkMode()" title="Toggle Dark Mode">
       <i class="fas fa-moon"></i>
-    </button>
+    </button> -->
   </nav>
 
   <div class="container">
@@ -222,7 +227,9 @@
       <button class="tab-btn active" data-tab="cakes">Cakes</button>
       <button class="tab-btn" data-tab="pastries">Pastries</button>
       <button class="tab-btn" data-tab="main">Main Dish</button>
-      <button class="tab-btn" data-tab="drinks">Drinks</button>
+      <button class="tab-btn" data-tab="proteins">Proteins</button>
+      <button class="tab-btn" data-tab="sides">Sides</button>
+      <button class="tab-btn" data-tab="soups">Soups</button>
     </div>
 
     <!-- Tab Contents -->
@@ -292,19 +299,83 @@
     <!-- Pastries -->
     <div id="pastries" class="tab-content" data-aos="fade-up">
       <div class="menu-item">
-        <img src="images/croissant.jpg" alt="Croissant">
+        <img src="pic46.jpeg" alt="Samosa">
         <div class="menu-details">
-          <h4>Butter Croissant</h4>
-          <p>Flaky, buttery and baked fresh.</p>
+          <h4>Samosa</h4>
+          <h5>Box of 5.</h5>
+          <span>₦2000</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="pic7.jpeg" alt="Puff Puff">
+        <div class="menu-details">
+          <h4>Puff Puff</h4>
+          <h5>Box of 10.</h5>
+          <span>₦1200</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="pic45.jpeg" alt="Spring Roll">
+        <div class="menu-details">
+          <h4>Spring Roll</h4>
+          <h5>Box of 5.</h5>
+          <span>₦2000</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="pic39.jpeg" alt="Meat Pie">
+        <div class="menu-details">
+          <h4>Meat Pie</h4>
+          <!-- <p>Golden puff with spicy minced beef.</p> -->
+          <span>₦1000</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="pic77.jpeg" alt="Sausage Roll">
+        <div class="menu-details">
+          <h4>Sausage Roll</h4>
+          <h5>Box of 5.</h5>
+          <span>₦3000</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="pic65.jpeg" alt="Shawarma">
+        <div class="menu-details">
+          <h4>Shawarma</h4>
+          <!-- <h5>Box of 5.</h5> -->
+          <span>₦4000</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="pic63.jpeg" alt="Pancake">
+        <div class="menu-details">
+          <h4>Pancake</h4>
+          <h5>Pack of 4.</h5>
+          <span>₦1000</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="pic40.jpeg" alt="Milky Doughnut">
+        <div class="menu-details">
+          <h4>Milky Doughnut</h4>
+          <h5>Box of 3.</h5>
+          <span>₦3000</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="pic31.jpeg" alt="Doughnut">
+        <div class="menu-details">
+          <h4>Doughnut</h4>
+          <h5>Box of 3.</h5>
           <span>₦1500</span>
         </div>
       </div>
       <div class="menu-item">
-        <img src="images/puff.jpg" alt="Puff">
+        <img src="pic5.jpeg" alt="Chin Chin">
         <div class="menu-details">
-          <h4>Meat Puff</h4>
-          <p>Golden puff with spicy minced beef.</p>
-          <span>₦800</span>
+          <h4>Chin Chin</h4>
+          <h5>1 liter</h5>
+          <span>₦4000</span>
         </div>
       </div>
     </div>
@@ -312,41 +383,300 @@
     <!-- Main Dish -->
     <div id="main" class="tab-content" data-aos="fade-up">
       <div class="menu-item">
-        <img src="images/jollof.jpg" alt="Jollof Rice">
+        <img src="pic52.jpeg" alt="Jollof Rice">
         <div class="menu-details">
-          <h4>Jollof Rice & Chicken</h4>
-          <p>Spicy Nigerian Jollof with grilled chicken.</p>
+          <h4>Jollof Rice</h4>
+          <h5>Per Plate.</h5>
+          <span>₦2000</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="pic44.jpeg" alt="Fried Rice">
+        <div class="menu-details">
+          <h4>Fried Rice</h4>
+          <h5>Per Plate.</h5>
+          <span>₦2000</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="pic60.jpeg" alt="Jollof Pasta">
+        <div class="menu-details">
+          <h4>Jollof Pasta</h4>
+          <h5>Per Plate.</h5>
+          <span>₦2200</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="pic78.jpeg" alt="Stir Fried Pasta">
+        <div class="menu-details">
+          <h4>Stir Fried Pasta</h4>
+          <h5>Per Plate.</h5>
+          <span>₦2200</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="pic59.jpeg" alt="Noodles">
+        <div class="menu-details">
+          <h4>Noodles</h4>
+          <h5>Per Plate.</h5>
+          <span>₦1500</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="pic61.jpeg" alt="Moi-Moi">
+        <div class="menu-details">
+          <h4>Moi-Moi</h4>
+          <h5>Pack of 3.</h5>
+          <span>₦1500</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="pic51.jpeg" alt="French Fries">
+        <div class="menu-details">
+          <h4>French Fries</h4>
+          <h5>Per Plate.</h5>
+          <span>₦2300</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="pic49.jpeg" alt="Plantain">
+        <div class="menu-details">
+          <h4>Plantain</h4>
+          <h5>Per Plate.</h5>
+          <span>₦2300</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="pic69.jpeg" alt="Boiled Yam & Egg Sauce">
+        <div class="menu-details">
+          <h4>Boiled Yam & Egg Sauce</h4>
+          <h5>Per Plate.</h5>
+          <span>₦2000</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="pic68.jpeg" alt="Spicy Fried Yam $ Sauce">
+        <div class="menu-details">
+          <h4>Spicy Fried Yam</h4>
+          <h5>Per Plate.</h5>
+          <span>₦1500</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="pic66.jpeg" alt="Yamarita (Golden Yam)">
+        <div class="menu-details">
+          <h4>Yamarita (Golden Yam)</h4>
+          <h5>Per Plate.</h5>
           <span>₦2500</span>
         </div>
       </div>
       <div class="menu-item">
-        <img src="images/spaghetti.jpg" alt="Spaghetti">
+        <img src="pic10.jpeg" alt="Food Tray">
         <div class="menu-details">
-          <h4>Spaghetti Bolognese</h4>
-          <p>Spaghetti with meat and tomato sauce.</p>
-          <span>₦2200</span>
+          <h4>Food Tray</h4>
+          <h5>Customisable to customer prefrence.</h5>
+          <!-- <span>₦2300</span> -->
         </div>
       </div>
     </div>
 
-    <!-- Drinks -->
-    <div id="drinks" class="tab-content" data-aos="fade-up">
+    
+  
+  <!-- Proteins -->
+  <div id="proteins" class="tab-content" data-aos="fade-up">
+    <div class="menu-item">
+      <img src="pic57.jpeg" alt="Pepper Chicken">
+      <div class="menu-details">
+        <h4>Pepper Chicken</h4>
+        <!-- <p>Orange, pineapple and watermelon blend.</p> -->
+        <span>₦1500</span>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="pic62.jpeg" alt="Chicken Nuggets">
+      <div class="menu-details">
+        <h4>Chicken Nuggets</h4>
+        <h5>Pack of 5</h5>
+        <span>₦1000</span>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="pic55.jpeg" alt="Beef">
+      <div class="menu-details">
+        <h4>Beef</h4>
+        <!-- <p>Berries and yogurt blended with honey.</p> -->
+        <span>₦300</span>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="pic67.jpeg" alt="Goat meat">
+      <div class="menu-details">
+        <h4>Goat Meat</h4>
+        <!-- <p>Berries and yogurt blended with honey.</p> -->
+        <span>₦500</span>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="pic79.jpeg" alt="Egg">
+      <div class="menu-details">
+        <h4>Egg</h4>
+        <!-- <p>Berries and yogurt blended with honey.</p> -->
+        <span>₦300</span>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="pic43.jpeg" alt="Fish">
+      <div class="menu-details">
+        <h4>Fish</h4>
+        <!-- <p>Berries and yogurt blended with honey.</p> -->
+        <span>₦500</span>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="pic58.jpeg" alt="Catfish Pepper Soup">
+      <div class="menu-details">
+        <h4>Catfish Pepper Soup</h4>
+        <h5>Available in different sizes.</h5>
+        <!-- <span>₦1800</span> -->
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="pic64.jpeg" alt="Catfish Pepper Soup">
+      <div class="menu-details">
+        <h4>Chicken Pepper Soup</h4>
+        <h5>Available in different sizes.</h5>
+        <!-- <span>₦1800</span> -->
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="pic80.jpeg" alt="Goat Meat Pepper Soup">
+      <div class="menu-details">
+        <h4>Goat Meat Pepper Soup</h4>
+        <h5>Per Plate.</h5>
+        <span>₦3000</span>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="pic54.jpeg" alt="Grilled Catfish">
+      <div class="menu-details">
+        <h4>Grilled Catfish</h4>
+        <h5>Available in different sizes.</h5>
+        <!-- <span>₦1800</span> -->
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Sides -->
+  <div id="sides" class="tab-content" data-aos="fade-up">
+    <div class="menu-item">
+      <img src="pic81.jpeg" alt="Chips">
+      <div class="menu-details">
+        <h4>Chips</h4>
+        <!-- <p>Spicy Nigerian Jollof with grilled chicken.</p> -->
+        <span>₦1000</span>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="pic53.jpeg" alt="Plantain">
+      <div class="menu-details">
+        <h4>Plantain</h4>
+        <!-- <p>Spaghetti with meat and tomato sauce.</p> -->
+        <span>₦1000</span>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="pic47.jpeg" alt="Salad">
+      <div class="menu-details">
+        <h4>Salad</h4>
+        <!-- <p>Spaghetti.</p> -->
+        <span>₦700</span>
+      </div>
+    </div>
+  </div>
+
+
+          <!-- Soups -->
+    <div id="soups" class="tab-content" data-aos="fade-up">
       <div class="menu-item">
-        <img src="images/juice.jpg" alt="Fruit Juice">
-        <div class="menu-details">
-          <h4>Fruit Juice</h4>
-          <p>Orange, pineapple and watermelon blend.</p>
-          <span>₦1200</span>
+        <img src="pic82.jpeg" alt="Egusi Soup">
+          <div class="menu-details">
+            <h4>Egusi Soup</h4>
+          <h5>2 Liters.</h5>
+          <span>₦8000</span>
         </div>
       </div>
       <div class="menu-item">
-        <img src="images/smoothie.jpg" alt="Smoothie">
-        <div class="menu-details">
-          <h4>Berry Smoothie</h4>
-          <p>Berries and yogurt blended with honey.</p>
-          <span>₦1800</span>
+        <img src="pic83.jpeg" alt="Vegetable Soup">
+          <div class="menu-details">
+            <h4>Vegetable Soup</h4>
+          <h5>2 Liters.</h5>
+          <span>₦8000</span>
         </div>
       </div>
+      <div class="menu-item">
+        <img src="pic84.jpeg" alt="Ogbono Soup">
+          <div class="menu-details">
+            <h4>Ogbono Soup</h4>
+          <h5>2 Liters.</h5>
+          <span>₦8000</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="pic74.jpeg" alt="Okra Soup">
+          <div class="menu-details">
+            <h4>Okra Soup</h4>
+          <h5>2 Liters.</h5>
+          <span>₦8000</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="pic85.jpeg" alt="Oha Soup">
+          <div class="menu-details">
+            <h4>Oha Soup</h4>
+          <h5>2 Liters.</h5>
+          <span>₦9000</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="pic86.jpeg" alt="Banga Soup">
+          <div class="menu-details">
+            <h4>Banga Soup</h4>
+          <h5>2 Liters.</h5>
+          <span>₦8500</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="pic48.jpeg" alt="Beef Stew">
+          <div class="menu-details">
+            <h4>Beef Stew</h4>
+          <h5>2 Liters.</h5>
+          <span>₦8000</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="pic42.jpeg" alt="Chicken Stew">
+          <div class="menu-details">
+            <h4>Chicken Stew</h4>
+          <h5>2 Liters.</h5>
+          <span>₦12000</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="pic41.jpeg" alt="Fish Stew">
+          <div class="menu-details">
+            <h4>Fish Stew</h4>
+          <h5>2 Liters.</h5>
+          <span>₦9000</span>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+    
+    <div class="call" style=" display: flex; justify-content: center;">
+      <h3>Please contact to place order.</h3>
     </div>
 
   <!-- AOS & Tab Script -->
@@ -367,9 +697,9 @@
       });
     });
 
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark');
-    }
+    // function toggleDarkMode() {
+    //   document.body.classList.toggle('dark');
+    // }
   </script>
 </body>
 </html>
