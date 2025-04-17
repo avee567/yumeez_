@@ -3,13 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Menu | Yummy's Pastries</title>
+  <title>Menu | Yumeez Pastries</title>
 
   <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
+    @media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .tabs {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .menu-item img {
+    width: 90%;
+    height: auto;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+
+  .toggle-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+}
     :root {
       --bg-color: #fffaf5;
       --text-color: #4b2e0f;
@@ -192,6 +237,7 @@
 
       .menu-item img {
         width: 100%;
+        max-width: 320px;
         height: auto;
       }
 
